@@ -1,0 +1,11 @@
+public class FirstClass {
+	public static void main(String [] args) {
+	 int a =10;
+	 int b =2;
+	 int c =8;
+	 int s;
+	 s=a+b+c;
+	 System.out.println("Sum of the given no is="+s);
+	}
+
+}
