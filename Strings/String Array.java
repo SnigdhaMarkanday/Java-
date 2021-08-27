@@ -6,8 +6,9 @@ public class Main
 	    BufferedReader b = new BufferedReader(a);
 	    int m;
 	    System.out.println("Choose From Menu \n 1.Create \n2.Display\n3.Swap\n4.Reverse List of Names\n 5.To Upper Case\n 6.To LowerCase 7.Title\n8.Toggle Case\n 9.Reverse Names\n 10.Sort List\n 11.Sort Names\n 12.Search Names\n13.Replace Locally\n14.Replace Globally \n 15.Replace String\n 16.Join and Create\n 17.display new String\n 18. Split in new string array \n19.Pallindrome\n 20.Display new String Array\n 21.Exit\n");
-	    m = Integer.parseInt(m);
-	    Switch(m);{
+	    m = Integer.parseInt(b.readLine());
+	    switch(m){
+	        
 	        case 1: 
 	            //Create
 	            break;
@@ -76,4 +77,5 @@ public class Main
 		
 	}
 }
+
   
