@@ -6,6 +6,8 @@ public class Main
 	    BufferedReader b = new BufferedReader(a);
 	    int m;
 	     String n[] = new String [10000];
+	      String J = null;
+	      String Y[]=null;
 	     int size=0,i,j;
 	     boolean k=true;
 	     while(k){
@@ -137,6 +139,16 @@ public class Main
         	           break;
         	       case 10:
         	           //Sort List
+        	          /* for(int j1=0;i<=4;i++){
+        	               for(int j1=j+1;j<=4;j++){
+        	                   if(n[i].compareTo(n[j])>0){
+        	                       String t;
+        	                       t=n[i];
+        	                       n[i]= n[j];
+        	                       n[j] = t;
+        	                   }
+        	               }
+        	           }*/
         	           break;
         	       case 11:
         	           //Sort Names
@@ -154,8 +166,6 @@ public class Main
         	           
         	           for(i=0;i<size;i++){
         	               n[i]=n[i].replace(ra,ra1);
-        	                   
-        	               
         	           }
         	            break;
         	       case 14:
@@ -166,18 +176,30 @@ public class Main
         	           break;
         	       case 16:
         	           //Join and Create
+        	           J="";
+        	           for(i=0;i<size-1;i++){
+        	               J+=n[i]+"*";//" String.join("*",n);
+        	            }
+        	            J=J+n[i];
         	           break;
         	       case 17:
         	           //Display new string array 
+        	           System.out.println(J);
         	           break;
         	       case 18:
         	           //Split in new String array
+        	           
+        	                Y = J.split("*",size-1);
+        	           
         	           break;
         	       case 19:
-        	           //Pallindrome
+                        //Display new String array
+                        for (i=0;i<Y.length;i++){
+                        System.out.println(Y[i]);
+                        }
         	           break;
         	       case 20:
-        	           //Display new String array
+        	           //Pallindrome
         	           break;
         	       case 21:
         	           k=false;
