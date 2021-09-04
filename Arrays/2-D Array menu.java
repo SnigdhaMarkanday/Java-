@@ -7,6 +7,7 @@ class Sum{
 			boolean k;
 			int n[][] = new int [3][3];
 			int t[][] = new int [3][3];
+			int sr,sc,ld,rd;
 			int r,c;
 				
 			k = true;
@@ -16,6 +17,7 @@ class Sum{
 				m = Integer.parseInt(b.readLine());
 					switch(m){
 						case 1:
+						//creating 2D Array
 							for(r=0;r<=2;r++){
 								for(c=0;c<=2;c++){
 										System.out.println("Enter Element ");
@@ -24,6 +26,7 @@ class Sum{
 							}
 						break;
 						case 2:
+						//Display 2D Array
 							for(r=0;r<=2;r++){
 								for(c=0;c<=2;c++){
 									System.out.print(n[r][c]+ "\t");
@@ -32,6 +35,7 @@ class Sum{
 							}
 							break;
 						case 3:
+						//Transpose
 							for(r=0;r<=2;r++){
 								for(c=0;c<=2;c++){
 									t[r][c] = n[c][r];
@@ -45,7 +49,64 @@ class Sum{
 							}
 							break;
 						case 4:
+						//Row Sum
+							for(r=0;r<=2;r++){
+								sr=0;
+								for(c=0;c<=2;c++){
+									sr = sr+n[r][c];
+
+								}
+								System.out.println(sr); 
+							}
+							break;
+						case 5:
+							//Column Sum
+							for(c=0;c<=2;c++){
+								sc =0;
+								for(r=0;r<=2;r++){
+									sc = sc+n[r][c];
+
+
+								}
+								System.out.println(sc); 
+
+							}
+							break;
+
+						case 6:
+						//Left Diagonal Sum
+						ld = 0;
+						for(r=0;r<=2;r++){
+							for(c=0;c<=2;c++){
+								if(r==c){
+									ld = ld+n[r][c];
+									
+								}
 							
+
+							}
+						}
+						System.out.println(ld);
+
+						break;
+						case 7:
+							//Right Diagonal Sum
+						rd = 0;
+						for(r=0;r<=2;r++){
+							for(c=2;c>=0;c--){
+								if(r+c==2){
+									rd = rd+n[r][c];
+								}
+									
+							
+
+							}
+						}
+						System.out.println(rd);
+						break;
+						case 8:
+							
+
 						case 21:
 						  k = false;
 						  break;
