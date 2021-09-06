@@ -7,7 +7,7 @@ class Sum{
 			boolean k;
 			int n[][] = new int [3][3];
 			int t[][] = new int [3][3];
-			int sr,sc,ld,rd;
+			int sr,sc,ld,rd,is,os;
 			int r,c;
 				
 			k = true;
@@ -105,8 +105,57 @@ class Sum{
 						System.out.println(rd);
 						break;
 						case 8:
-							
+						//Inner Sum
+						is=0;
+						for(r=0;r<=2;r++){
+							for(c=0;c<=2;c++){
+								if((r+c)%2!=0){
+									is = is+n[r][c];
 
+								}
+							}
+						}
+						System.out.println(is);
+						break;
+						case 9:
+						//Outer Sum
+						os = 0;
+
+						for(r=0;r<=2;r++){
+							for(c=0;c<=2;c++){
+								if(r%2==0){
+									if(c%2==0){
+										os=os+n[r][c];
+									}
+								}
+							}
+						}
+						System.out.println(os);
+						break;
+						case 10:
+						//Mirror
+						for(r=0;r<=2;r++){
+							for(c=0;c<=2;c++){
+								int temp;
+								temp = n[r][2];
+								n[r][2] = n[r][0];
+								n[r][0] = temp;
+							}
+						}
+						for(r=0;r<=2;r++){
+							for(c=0;c<=2;c++){
+								System.out.print(n[r][c]+"\t");
+							}
+							System.out.println();
+						}
+						break;
+						case 11:
+						//Row Sort 
+						for(r=0;r<=2;r++){
+							for(c=0;c<=2;c++){
+								
+							}
+						}
 						case 21:
 						  k = false;
 						  break;
